@@ -8,34 +8,92 @@ img{max-width: 100%;}
 a{text-decoration: none;}
 
 /*header*/
-.cabecalho{width: 100%; display: flex; justify-content: space-between; padding: 20px; background-color: #2a2af7; align-items: center; position: fixed;}
+.cabecalho{width: 100%; display: flex; justify-content: space-between; padding: 20px; background-color: #a02c2c; align-items: center; height: 5rem;}
 
-.menu ul{display: flex; align-items: center; }
+.menu ul{display: flex; align-items: center; height: 5rem;}
 
 .menu li{margin: 0 10px;}
 
-.menu a{color:#fff;text-transform: uppercase; font-size: 0.9rem; transition:0.4s;}
+.menu a{color:#fff;text-transform: uppercase; font-size: 0.9rem;}
 
 .menu i{color:#fff;}
 
 .fa-home{font-size: 1.5rem;}
 
-.menu a:hover{color:gray;}
+.menu a:hover,.menu i:hover{color:#c3b8b8;}
 
-.show-menu-btn,.hide-menu-btn{display: none; cursor: pointer; font-size: 1.5rem;}
+.menu i:hover{color:#c3b8b8;}
 
+.show-menu-btn,.hide-menu-btn{display: none; cursor: pointer; font-size: 1.5rem; color:#fff;}
 
 #toggle{display: none;}
 
 @media screen and (max-width:800px){
-    .show-menu-btn{display: inline-block; order:10; align-self: flex-start;}
-    .hide-menu-btn{display: inline-block; position: absolute; right: 20px; top:20px;}
-    .menu{width: 100%;}
-    .menu ul{flex-direction: column; display:none; position: absolute;width: 100%; height: 100vh; background-color: brown; left: 0; top: 0;}
-    .menu a{display: inline-block; margin: 20px 0;}
-    .menu a:hover{transform: scale(1.2)}
-    h1{align-self: flex-start;}
-    #toggle:checked ~ .menu ul{display:block; text-align: center;}
+    .cabecalho{position: fixed;}
+    .show-menu-btn{display: block; order:10;}
+    .hide-menu-btn{display: block; position: absolute; right: 60px; top:20px;}
+    .menu ul{flex-direction: column; position: absolute; width: 100%; height: 100vh; background-color:brown; right:-100%; top: 0; padding-top: 40px; transition: 0.5s;}
+    .menu li{width: 100%;}
+    .menu a{display: block; padding:10px 0;}
+    .menu a:hover{transform: scale(1.5); transition:0.5s;}
+    h1{align-self: center;}
+    #toggle:checked ~ .menu ul{text-align: center; right: 0; transition:0.5s;}
 }
+
+/*Capa*/
+.capa{background-image: url(../img/restaurante.jpg); background-repeat: no-repeat; background-size: 100vw 100vh;height: 100vh; background-position: center; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;}
+
+.capa h1{font-size: 3rem; color:#fff; margin-bottom: 40px;}
+
+.capa p{font-size: 2rem; color: #fff;}
+
+@media screen and (max-width:800px){
+    .capa h1{font-size: 2rem;}
+    .capa p{font-size: 1.3rem;}
+}
+
+/*depoimentos*/
+
+.depoimentos{display: flex; align-items: center; justify-content: center; flex-direction: column;}
+
+.depoimentos h2{padding:40px 0; font-size: 2rem; color: #a02c2c; text-align: center;}
+
+.grid{display: flex; flex-wrap: wrap; max-width: 960px; margin: 0 auto;}
+
+.grid li{flex: 1 1 50%; flex-wrap: wrap;}
+
+.grid figure{display: flex; align-items: center; margin: 20px; text-align: justify;}
+
+.depoimentos h3{color: dodgerblue; margin-bottom: 5px;}
+
+.depoimentos p{color: #a02c2c;}
+
+.grid img{border-radius: 50%;width: 30%; height: 50%; align-self: center; padding:10px }
+
+@media screen and (max-width:800px){
+    .depoimentos h2{font-size: 1.5rem;}
+    .grid{flex-direction: column;}
+    .grid li{flex-basis: 100%;}
+}
+
+/*rodape*/
+
+.rodape{width: 100%; background-color: #a02c2c; display:flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 20px 0;}
+
+.menu-rodape ul{display: flex; align-items: center; margin: 20px 0;;}
+
+.menu-rodape li{margin: 0 10px;}
+
+.menu-rodape a{color:#fff; text-transform: uppercase; font-size: 0.9rem;}
+
+.menu-rodape a:hover{color:#c3b8b8;}
+
+.rodape h5{color: #fff; border-top: 1.5px solid #fff; padding-top: 10px; width: 100%;}
+
+@media screen and (max-width:800px){
+    .menu-rodape ul{flex-direction: column;}
+    .menu-rodape li{padding: 5px 0;}
+}
+
 
 
