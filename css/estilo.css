@@ -1,0 +1,41 @@
+/*CSS reset*/
+*{margin:0; padding:0; box-sizing: border-box; font-size: 100%; font-family: 'Roboto', sans-serif; border: none; outline: none;}
+
+nav,ul{list-style: none;}
+
+img{max-width: 100%;}
+
+a{text-decoration: none;}
+
+/*header*/
+.cabecalho{width: 100%; display: flex; justify-content: space-between; padding: 20px; background-color: #2a2af7; align-items: center; position: fixed;}
+
+.menu ul{display: flex; align-items: center; }
+
+.menu li{margin: 0 10px;}
+
+.menu a{color:#fff;text-transform: uppercase; font-size: 0.9rem; transition:0.4s;}
+
+.menu i{color:#fff;}
+
+.fa-home{font-size: 1.5rem;}
+
+.menu a:hover{color:gray;}
+
+.show-menu-btn,.hide-menu-btn{display: none; cursor: pointer; font-size: 1.5rem;}
+
+
+#toggle{display: none;}
+
+@media screen and (max-width:800px){
+    .show-menu-btn{display: inline-block; order:10; align-self: flex-start;}
+    .hide-menu-btn{display: inline-block; position: absolute; right: 20px; top:20px;}
+    .menu{width: 100%;}
+    .menu ul{flex-direction: column; display:none; position: absolute;width: 100%; height: 100vh; background-color: brown; left: 0; top: 0;}
+    .menu a{display: inline-block; margin: 20px 0;}
+    .menu a:hover{transform: scale(1.2)}
+    h1{align-self: flex-start;}
+    #toggle:checked ~ .menu ul{display:block; text-align: center;}
+}
+
+
